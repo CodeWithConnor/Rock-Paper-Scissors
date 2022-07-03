@@ -9,20 +9,28 @@ const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('#game button') // Selects all buttons inside of #game
 const userResultImg = document.getElementById('user-result img')
 const computerResultImg = document.getElementById('computer-result img')
+const banner = document.querySelector("#game #banner")
+const playerUsername = document.querySelector('#user-result h3')
 // Storing globally so we can use it everywhere
 let userChoice
 let randomNum
 let computerChoice
 let username
+let winScore = 0
+let lossScore = 0
+let drawScore = 0
 
 function validateForm() {
     username = document.getElementById('usernameField').value;
   
     // Only proceed if name is valid
     if (username.length > 0) {
-        // alert('Your name is: ' + username);
         nameDiv.style.display = 'none';
         gameDiv.style.display = 'flex';
+
+        // Update banner and player's username
+        banner.innerHTML = "The bot is waiting for you to make a move!"
+        playerUsername.innerHTML = username + ":"
      } else {
         alert('Please enter your name.');
      }
@@ -68,18 +76,21 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
     if ((userChoice == "rock" && computerChoice == "rock") || 
     ((userChoice == "paper" && computerChoice == "paper")) || 
     (userChoice == "scissors" && computerChoice == "scissors")) {
-        resultDisplay.innerHTML = "It's a draw!"
+        drawScore++
+        banner.innerHTML = "Win: " + winScore + " | Loss: " + lossScore + " | Draw: " + drawScore
     } 
     // Handling LOSS result
     else if ((userChoice == "rock" && computerChoice == "paper") || 
     ((userChoice == "paper" && computerChoice == "scissors")) || 
     (userChoice == "scissors" && computerChoice == "rock")) {
-        resultDisplay.innerHTML = "You lose!"
+        lossScore++
+        banner.innerHTML = "Win: " + winScore + " | Loss: " + lossScore + " | Draw: " + drawScore
     }
     // Handling WIN result
     else if ((userChoice == "paper" && computerChoice == "rock") || 
     ((userChoice == "scissors" && computerChoice == "paper")) || 
     (userChoice == "rock" && computerChoice == "scissors")) {
-        resultDisplay.innerHTML = "You win!"
+        winScore++
+        banner.innerHTML = "Win: " + winScore + " | Loss: " + lossScore + " | Draw: " + drawScore
     }
 }))
