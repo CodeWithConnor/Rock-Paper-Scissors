@@ -65,6 +65,21 @@ h1 {
     justify-content: center;
     /* Ensures content flows vertically */
     flex-direction: column;
+    position: relative
+}
+
+#game #banner {
+  width: 100%;
+  height: 50px;
+  background: rgb(247, 0, 136);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #game #choice-wrapper .user-result, .computer-result {
@@ -100,6 +115,8 @@ h1 {
     font-weight: bold;
     border-radius: 10px;
     margin: 0 0 40px 0;
+    color: #6f8d9f;
+    
 }
 
 /* Logo */
@@ -275,6 +292,7 @@ h1 {
 @media (min-width: 768px) {
   #submit {
     padding: 14px 22px;
+    width: 150px;
   }
   #rock {
     padding: 14px 22px;
