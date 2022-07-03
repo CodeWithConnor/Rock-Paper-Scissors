@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    background: #4CA1AF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #87d8e8, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 25px 0 15px 0;
+}
+
+/* Used to center the #name div */
+#name-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Helps center vertically */
+    min-height: 100vh;
+}
+
+.child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #2f80ed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#name {
+    /* General design styling */
+    background: rgba(255, 255, 255, 0.795);
+    border-radius: 20px;
+    width: 550px;
+    height: 450px;
+    color: #0000009c;
+    /* Centers elements inside entire div */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensures content flows vertically */
+    flex-direction: column;
+}
+
+#game {
+    /* General design styling */
+    background: rgba(255, 255, 255, 0.795);
+    border-radius: 20px;
+    width: 550px;
+    height: 450px;
+    color: #0000009c;
+    /* Centers elements inside entire div */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensures content flows vertically */
+    flex-direction: column;
+}
+
+#game #choice-wrapper .user-result, .computer-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#game #choice-wrapper #user-result {
+  margin-right: 100px;
+}
+
+#game #choice-wrapper h3 {
+  text-align: center;
+}
+
+#game #choice-wrapper img {
+  width: 150px;
+}
+
+#game #choice-wrapper {
+    display: flex;
+}
+
+#name input#usernameField {
+    border: none;
+    outline: none;
+    width: 225px;
+    height: 35px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 0 0 40px 0;
+}
+
+/* Logo */
+#name img {
+    width: 100px;
+    margin: 12px;
+
+}
+
+#submit {
+  background-color: #2f80ed;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  padding: 14px 30px;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+}
+
+#submit:hover {
+  background-color: #1366d6;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+#submit:hover:after {
+  opacity: .5;
+}
+
+#submit:active {
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+#submit:active:after {
+  opacity: 1;
+}
+
+/* ROCK BUTTON */
+#rock {
+  background-color: #f18ba8;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  padding: 14px 30px;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+}
+
+#rock:hover {
+  background-color: #fd779d;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+#rock:hover:after {
+  opacity: .5;
+}
+
+#rock:active {
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+#rock:active:after {
+  opacity: 1;
+}
+
+/* PAPER BUTTON */
+#paper {
+  background-color: #fce178;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  padding: 14px 30px;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+}
+
+#paper:hover {
+  background-color: #f8d858;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+#paper:hover:after {
+  opacity: .5;
+}
+
+#paper:active {
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+#paper:active:after {
+  opacity: 1;
+}
+
+/* SCISSORS BUTTON */
+#scissors {
+  background-color: #77dce3;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  padding: 14px 30px;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+}
+
+#scissors:hover {
+  background-color: #58d4dd;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+#scissors:hover:after {
+  opacity: .5;
+}
+
+#scissors:active {
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+#scissors:active:after {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  #submit {
+    padding: 14px 22px;
+  }
+  #rock {
+    padding: 14px 22px;
+  }
+  #paper {
+    padding: 14px 22px;
+  }
+  #scissors {
+    padding: 14px 22px;
+  }
+}
+
+/* Hidden by default, only shows after user has entered their name */
+#game {
+    display: none;
+}

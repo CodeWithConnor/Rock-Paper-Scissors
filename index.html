@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name-wrapper">
+        <div class="child">
+            Rock, Paper, Scissors!
+        </div>
+        
+        <div id="name">
+            <img src="assets/logo.png">
+            <h1>Please enter your name:</h1>
+            <input id="usernameField" type="text"></input>
+            <button id="submit" type="submit">Submit</button>
+        </div>
+
+        <div id="game">
+            <div id="choice-wrapper">
+                <div id="user-result">
+                    <h3>Your Choice:</h3>
+                    <img src="assets/rock.png">
+                </div>
+                <div id="computer-result">
+                    <h3>Bot Choice:</h3>
+                    <img src="assets/rock.png">
+                </div>
+            </div>
+
+            <h3>Result: <span id="result"></span></h3>
+            <div id="btn-group">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
